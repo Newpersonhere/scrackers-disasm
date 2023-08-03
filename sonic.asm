@@ -9595,7 +9595,7 @@ loc_A94E:				; CODE XREF: ROM:0000A93Cj
 		addi.b	#-$80,d2
 
 loc_A96C:				; CODE XREF: ROM:0000A966j
-		jsr	sub_3F14
+		jsr	(sub_3F14).w
 		move.w	$2C(a6),d2
 		muls.w	d2,d0
 		muls.w	d2,d1
@@ -11741,36 +11741,36 @@ loc_BC44:				; CODE XREF: ROM:0000BC38j
 		move.w	word_BC56(pc,d7.w),d7
 		jmp	word_BC56(pc,d7.w)
 ; ---------------------------------------------------------------------------
-word_BC56:	dc.w $34
-		dc.w $66
-		dc.w $66
-		dc.w $66
-		dc.w $66
-		dc.w $6E
-		dc.w $6E
-		dc.w $6E
-		dc.w $6E
-		dc.w $9A
-		dc.w $34
-		dc.w $34
-		dc.w $34
-		dc.w $180
-		dc.w $34
-		dc.w $66
-		dc.w $66
-		dc.w $66
-		dc.w $66
-		dc.w $6E
-		dc.w $6E
-		dc.w $6E
-		dc.w $6E
-		dc.w $188
-		dc.w $1C0
-		dc.w $1C8
-		dc.w $6E
-		dc.w $80
-		dc.w 4
+word_BC56:	dc.w loc_BC8A-*
+		dc.w loc_BCBC-word_BC56
+		dc.w loc_BCBC-word_BC56
+		dc.w loc_BCBC-word_BC56
+		dc.w loc_BCBC-word_BC56
+		dc.w loc_BCC4-word_BC56
+		dc.w loc_BCC4-word_BC56
+		dc.w loc_BCC4-word_BC56
+		dc.w loc_BCC4-word_BC56
+		dc.w loc_BCF0-word_BC56
+		dc.w loc_BC8A-word_BC56
+		dc.w loc_BC8A-word_BC56
+		dc.w loc_BC8A-word_BC56
+		dc.w loc_BDD6-word_BC56
+		dc.w loc_BC8A-word_BC56
+		dc.w loc_BCBC-word_BC56
+		dc.w loc_BCBC-word_BC56
+		dc.w loc_BCBC-word_BC56
+		dc.w loc_BCBC-word_BC56
+		dc.w loc_BCC4-word_BC56
+		dc.w loc_BCC4-word_BC56
+		dc.w loc_BCC4-word_BC56
+		dc.w loc_BCC4-word_BC56
+		dc.w loc_BDDE-word_BC56
+		dc.w loc_BE16-word_BC56
+		dc.w loc_BE1E-word_BC56
 ; ---------------------------------------------------------------------------
+
+loc_BC8A:
+		ori.w	#$80,4(a6)
 
 sub_BC90:
 		move.w  $2A(a6),d0
@@ -11790,9 +11790,13 @@ loc_BCA0:				; CODE XREF: ROM:0000BC9Cj
 		bsr.w	sub_CA82
 		rts
 ; ---------------------------------------------------------------------------
+
+loc_BCBC:
 		andi.w	#$FF7F,4(a6)
 		rts
 ; ---------------------------------------------------------------------------
+
+loc_BCC4:
 		ori.w	#$80,4(a6) ; "€"
 		move.w	#$67,$26(a6) ; "g"
 		moveq	#$FFFFFFF0,d0
@@ -11807,6 +11811,8 @@ loc_BCE6:				; CODE XREF: ROM:0000BCDEj
 		bsr.w	loc_CA8A
 		rts
 ; ---------------------------------------------------------------------------
+
+loc_BCF0:
 		ori.w	#$80,4(a6) ; "€"
 		move.w	$18(a5),d0
 		move.w	$1C(a5),d1
@@ -11907,9 +11913,13 @@ word_BD76:	dc.w $54
 		dc.w $62
 		dc.w $63
 ; ---------------------------------------------------------------------------
+
+loc_BDD6:
 		andi.w	#$FF7F,4(a6)
 		rts
 ; ---------------------------------------------------------------------------
+
+loc_BDDE:
 		ori.w	#$80,4(a6) ; "€"
 		moveq	#0,d0
 		move.b	$28(a5),d0
@@ -11934,9 +11944,13 @@ word_BDFC:	dc.w $54
 		dc.w $57
 		dc.w $FFFF
 ; ---------------------------------------------------------------------------
+
+loc_BE16:
 		andi.w	#$FF7F,4(a6)
 		rts
 ; ---------------------------------------------------------------------------
+
+loc_BE1E:
 		andi.w	#$FF7F,4(a6)
 		rts
 ; ---------------------------------------------------------------------------
