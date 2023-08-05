@@ -44,7 +44,7 @@
 		dc.w AniSon_Run135-ANI_Sonic		; Running (135* 315*)
 		dc.w AniSon_Spindsh-ANI_Sonic		; Spindashing
 		dc.w AniSon_Hurt-ANI_Sonic		; Hurt
-		dc.w AniSon_Dizzy-ANI_Sonic		; fast spinning where sonic looks dizzy (Unused)
+		dc.w AniSon_Dizzy-ANI_Sonic		; fast spinning where sonic looks dizzy
 ; ---------------------------------------------------------------------------
 AniSon_Normal:	dc.b $01,$02,$00
 		dc.b $00,$01,$02
